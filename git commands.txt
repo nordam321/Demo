@@ -1,0 +1,73 @@
+git status: untracked and tracked files to be added and committed
+
+git add (file name): adding file to git using command so it can be tracked and used in cmd
+
+git reset head (file name): removing added file before committing
+
+git commit -m "description": committing changes done (checkpoint)
+
+git branch: displays all branches
+
+git remote -v: displays all remote repo
+
+git push (Remote name) (branch name): pushing all changes done in local repo to remote repo such as committing
+
+git pull (Remote name): pulls all the changes from main repo(githup) to local repo
+
+git config --global user.(email, name, etc.) "set value": updates the user name email pass and so on
+
+git config --global --edit: update user name email pass colors and so on from editor such as visual studio
+changing color:
+	[color "status"]
+		added = yellow
+		changed = red bold
+		untracked = magenta bold
+
+	[color "branch"]
+		remote = yellow
+
+touch (file name): creates new file
+
+mkdir (folder name): creates new folder
+
+git config --global alias.(shortcut) (command): after . we write a shortcut for the command written after the shortcut 
+
+git branch (branch name): creates new branch
+
+git checkout (branch name): switches to the specified branch
+
+git branch -d (branch name): deletes the specified branch wont be deleted if their is unsaved updates
+
+git branch -D (branch name): deletes the specified branch no matter what even if their is unsaved updates
+
+git checkout -b (branch name): creates and switches to the specified branch
+
+git branch -m (new branch name): renames the specified branch
+
+git merge (branch name): from the main branch writing this line will merge the specified branch with the branch you are working on now
+
+git stash: saves the uncommitted files to be reused before committing
+
+git stash pop stash@{(list num)}: gets the saved files again to continue updating on them from the specified list num
+
+touch (file name): creates file
+
+git stash drop stash@{(list num)}: deletes the specified file
+
+git stash show stash@{(list num)}: shows what inside the specified list from files and folders
+
+git stash list: show saved lists in the stash
+
+git stash clear: clears the stash from all files and lists
+
+git restore --staged (file name): gets the added file from tracked to untracked
+
+git clean -n: shows the files that will be deleted (to avoid a specific file you can just added it using "git add (file name)")
+
+git clean -f: deletes the files shown in clean -n
+
+git log: shows all committed files and the head file this can help us to define and change the head so we can delete a pushed file
+
+git reset --hard (head hash): changes the head to the specified hash
+
+git push (local branch) (remote branch) --force: deletes all files after the head
